@@ -1,0 +1,3 @@
+def ftoc(f_temp)
+	c_temp = (5.0/9.0) * (f_temp - 32)
+end
