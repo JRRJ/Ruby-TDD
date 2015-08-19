@@ -1,0 +1,30 @@
+def echo says
+	says
+end
+
+def shout says
+	says.upcase
+end
+
+def repeat says, n = 2
+	saysBack = says	
+	(n-1).times do
+		saysBack += " " + says
+	end
+	saysBack
+end
+
+def start_of_word says, start
+	says[0..start-1]
+end
+
+def first_word says
+	says.split(" ")[0]
+end
+
+def titleize says
+	arr = says.split(" ")
+	arr.each{|x| unless(x == 'a' || x == 'an' || x == 'the' || x == 'or' || x == 'for' || x == 'on' || x == 'at' || x == 'to' || x == 'from' || x == 'by' || x == 'and' || x == 'over') then x.capitalize! end}
+	arr[0].capitalize!;	
+	arr.join(" ")
+end
