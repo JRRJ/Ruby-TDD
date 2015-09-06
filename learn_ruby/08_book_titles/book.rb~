@@ -1,25 +1,10 @@
-def echo says
-	says
-end
-
-def shout says
-	says.upcase
-end
-
-def repeat says, n = 2
-	saysBack = says	
-	(n-1).times do
-		saysBack += " " + says
+class Book
+	def title=(new_title)
+		@title = titleize(new_title)
 	end
-	saysBack
-end
-
-def start_of_word says, start
-	says[0..start-1]
-end
-
-def first_word says
-	says.split(" ")[0]
+	def title
+		@title
+	end
 end
 
 def titleize says

@@ -1,0 +1,15 @@
+def measure n = 1
+	before = []	
+	after = []
+	n.times do
+		before[n] = Time.now
+		puts Time.now
+		yield
+		after[n] = Time.now		
+	end
+	average_time = 0
+	n.times do
+		average_time += (after[n]-before[n])
+	end	
+	average_time
+end
